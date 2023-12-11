@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="compra.css">
+    
+
+    <title>Carrito Compras en JavaScript</title>
+
+    <style>
+        /* ULTIMOS cambios */
+.largo{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.proce-compra{
+    padding: 10px 10px;
+    border-radius: 5px;
+    background: #e9520c;
+    border: 1px solid #e9520c;
+}
+
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="image" style="position:relative; top: 10px;"><img src="../IMAGEN/logo1.png" alt="logo"></div>
+            <div class="nombreRes">
+                <a href="../Inicio/index.html">Cevicheria ARCO IRIS</a>
+            </div>
+        </div>
+    </header>
+
+    <br>
+
+    <main id="main">
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <form id="procesar-pago">
+
+                        <div id="carrito" class="form-group table-responsive">
+                            <table class="form-group table tablaIPE" id="lista-compra">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Sub Total</th>
+                                        <th scope="col">Eliminar</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody class="cuerpo">
+
+                                </tbody>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                                    <th scope="col">
+                                        <p id="subtotal"></p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">IGV :</th>
+                                    <th scope="col">
+                                        <p id="igv"></p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                                    <th scope="col">
+                                        <input id="total" name="monto" class="font-weight-bold border-0" readonly style="background-color: white;"></input>
+                                    </th>
+                                </tr>
+
+                            </table>
+
+                        </div>
+
+                        <div class="tipopago" id="tipoPago">
+                            <div class="selecttipo">
+                                <h3><b>Seleccione Tipo de Pago a realizar</b></h3>
+                            </div>
+                            <div class="opcion">
+                                <div class="select" id="tarjeta" onclick="abreTarjeta()">
+                                    <input type="button" value="TARJETA">
+                                </div>
+                                <div class="select" id="efectivo" onclick="abreEfectivo()">
+                                    <input type="button" value="EFECTIVO">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tarjeta" id="pagoTarjeta" style="display: none;">
+                            <div class="tarjeta1">
+                                <p>
+                                    <b>IMPORTANTE:</b> Si tu cuenta bancaria es en Soles recomendamos usar PagoEfectivo
+                                    y/o
+                                    PagoDirecto para evitar comisiones bancarias en tus depósitos. recuerda Para
+                                    depositar
+                                    por Visa debes ser el titular de la tarjeta.
+                                </p>
+                            </div>
+                            <div class="tarjeta2">
+                                <h3><b>Por favor coloca tu información</b></h3>
+                                <div class="tarjeta3">
+                                    <label for="tarjeta12" class="nombre"><b>Ingrese Cuenta:</b></label>
+                                    <input type="text" name="" id="nroCuenta" maxlength="19" onclick="contador()" placeholder="#### #### #### ####">
+                                </div>
+                                <div class="tarjeta4">
+                                    <div>
+                                        <label for="tarjeta12" class="nombre"><b>Ingrese Fecha de Caducidad:</b></label>
+                                        <input type="text" name="" maxlength="5" id="nroFVen" onKeyPress="return soloNumeros(event)" placeholder="MM/YY">
+                                    </div>
+                                    <div style="margin-left: 50px;">
+                                        <label for="tarjeta12" class="nombre"><b>Ingrese CV:</b></label>
+                                        <input type="text" name="" maxlength="3" id="nroCVC" onKeyPress="return soloNumeros(event)" placeholder="CVV">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="largo" style="margin-top: -25px;cursor: pointer;"><input type="button" class="proce-compra" id="ProCompra" value="Procesar Compra" onclick="tarjeta()"></input></div>
+                        </div>
+
+                        <br>
+
+
+                        <div class="efectivo" id="pagoEfectivo" style="display: none;">
+                            
+                            <div class="efectivo2">
+                                <label for="tarjeta12" class="nombre1"><b>Ingrese monto con el cual pagara:</b></label>
+                                <input id="montoCompleto" type=text list=value style="color:white">
+                            </div>
+                            <div class="efectivo3">
+                                <p>
+                                    El pago en efectivo es muy fácil y seguro. Sólo es necesario que encuentres el
+                                    producto
+                                    de tu elección y al momento de elegir el medio de pago, escojas PagoEfectivo. Si no
+                                    estás registrado
+                                    previamente en PagoEfectivo, te puedes registrar en ese momento y generar un ticket
+                                    de Pago
+                                </p>
+                            </div>
+
+                            <div class="largo" style="cursor: pointer;"><input class="proce-compra" type="button" id="ProCompra" value="Procesar Compra" onclick="efectivo()"></div>
+                        </div>
+
+                        <br>
+                        <div class="row justify-content-center" id="loaders">
+                            <img id="cargando" src="img/cargando.gif" width="220">
+                        </div>
+
+                        <div class="row justify-content-between botones">
+                            <div class="col-md-4 mb-2 botones_contendor">
+                                <a href="comiPeruana.html" class="btn btn-info btn-block">Seguir comprando</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4 botones_contendor" style="display: none;">
+                                <input type="button" class="btn btn-success btn-block" id="procesar-compra" value="Realizar compra">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/pago.js"></script>
+    <script src="./js/solonumeros.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/compra.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/finalizarPedido.js"></script>
+
+
+
+</body>
+
+</html>

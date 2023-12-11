@@ -1,0 +1,346 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    border: 1px solid black;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    background: black;
+    position: fixed;
+    width: 100%;
+}
+
+main {
+    /* border: 1px solid green; */
+    display: flex;
+    margin-top: -20px;    
+    justify-content: center;
+    background: rgba(172, 118, 48, 0.685); /*aqui podemos poner imagen de fondo*/
+    padding-top: 11vh;
+}
+
+.tablaIPE {
+    margin: 30px;
+    border: 10px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.877);
+}
+
+th{
+    border: 1px solid rgb(0, 0, 0);
+    background:rgb(0, 0, 0);
+    padding: 10px 0px 10px 0px;
+    color: white;
+
+}
+
+.botones {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.botones_contendor {
+    border: 10px solid rgb(233, 82, 12);
+    border-radius: 5px;
+    background: rgb(233, 82, 12);
+}
+
+.botones_contendor>a {
+    color: white;
+}
+
+.botones_contendor>input {
+    cursor: pointer;
+    border: none;
+    background: rgb(233, 82, 12);
+    color: white;
+}
+
+tbody.cuerpo tr td {
+    /* border: 1px solid rgb(189, 174, 174); */
+    border: 1px solid white;
+    padding: 10px;            
+    /* display: flex; */
+    text-align: center;
+    color: white;
+    
+}
+.borrar-producto{
+    color: yellow;
+    transition: 0.4s;
+}
+.borrar-producto:hover{
+    color: red;
+}
+
+.justify-content-center{
+    display: none;
+}
+.cuerpo{
+    overflow-y: scroll;
+    height: 10vh;
+}
+
+/* para el cliente y correo */
+
+.texto{
+    margin: 20px 0 20px 0;
+    /* border: 1px solid red; */
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.767);
+    color: orange;
+}
+
+.texto .h2{
+    /* border: 1px solid blue; */
+    font-size: 20px;
+}
+.texto input{
+    /* border: 1px solid blue; */
+    width: 700px;
+    /* margin-right: 50px; */
+    height: 25px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+.header{    
+    display: flex;
+}
+.header > div > a{
+    color: orange;
+    font-family: cursive;
+}
+
+.image{
+    width:10vh;
+    height:10vh;
+    /* border: 1px solid blue; */
+}
+
+.image > img{
+    
+    width:10vh;
+    /* height: 9vh; */
+}
+
+.nombreRes{
+    width:45vh;
+    /* border:1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombreRes{
+    font-size: 25px;
+}
+/* format responsive */
+
+/* @media screen and (max-width: 800px){
+
+
+    .texto{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .texto input{
+        width: 400px;
+    }
+
+    .nombreRes{        
+        width: 100%;
+    }
+
+    .botones_contendor{
+        width: 30%;
+        height: 70%;
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .reali{
+        font-size: 25px;
+    }
+} */
+/* para el tipo de pago */
+.select input{
+    background: rgb(228, 15, 15);
+    color:white;
+    border: 2px solid rgb(250, 51, 51);
+    height: 40px;
+    width: 90px;
+    border-radius: 5px;
+}
+.select input:hover{
+    background: rgb(206, 74, 74);
+    color: black;
+    border: 2px solid red;
+}
+.selecttipo{
+    /* border: 2px solid green; */
+    display: inline-block;
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+    margin-left: 25px;
+}
+.opcion{
+    /* border: 2px solid purple; */
+    height: 90px;
+    width: 100%;
+    display: flex; 
+    justify-content: space-around ;
+    align-items: center;
+    margin-top: 10px;
+
+}
+.tipopago{
+    /* border: 1px solid red;  */
+    height: 150px;
+    display: inline-block;
+    border-radius: 15px;
+    background: black;
+    width: 92%;
+    margin-left: 30px;
+}
+.tarjeta{
+  /* border: 2px solid red;   */
+     margin: 10px; 
+    height: 350px;
+    width: 500px;
+    background: rgb(29, 28, 28);
+    border-radius: 10px;
+    margin-left: 15%;
+
+   }
+   .tarjeta1{
+          /* border: 2px solid orange;   */
+       margin: 10px; 
+       height: 80px;
+       padding: 5px; 
+       color: rgb(235, 222, 42);
+       font-size: 14px;
+       
+   }
+   .tarjeta1 p{
+       margin-top: 10px;
+       
+   }
+   .tarjeta2{
+         /* border: 2px solid purple;   */
+       height: 240px; 
+       /* position: absolute; */
+       float: none;
+       bottom: -14%;
+       
+   }
+   .tarjeta2 h3{
+       color: white;
+       padding: 3px;
+       margin-left: 10px;
+   }
+   .tarjeta3{
+        /* border: 2px solid green;   */
+        padding: 5px;
+        margin: 10px;
+   }
+   .tarjeta3 input{
+     /* border: 2px solid blue;   */
+       display: block; 
+       margin: 5px; 
+       width: 85%;
+       height: 30px;
+       background: rgb(102, 101, 101);
+       
+   }
+   .tarjeta4{
+     /* border: 2px solid black;   */
+       margin: 10px;
+       display: flex;
+       width: 100%;
+       padding: 5px;
+   }
+   .tarjeta4 input{
+       /* border: 2px solid blue;    */
+       display: block;
+       height: 30px;
+       margin: 5px;
+       background: rgb(102, 101, 101);
+   }
+   .nombre{
+       color: rgb(218, 129, 13);
+       margin: 5px;
+   }
+   .efectivo{
+    /* border: 2px solid greenyellow;  */
+       height: 300px;
+       width: 500px;
+       background: rgb(29, 28, 28);
+       border-radius: 10px;
+       margin: 10px;
+       margin-left: 15%;
+       /* display: block !important; */
+   }
+   .efectivo1{
+        /* border: 2px solid orangered;  */
+       margin: 10px;
+       height: 80px;
+       padding: 5px;
+       color: rgb(235, 222, 42);
+       font-size: 14px;
+   }
+   .efectivo1 p{
+       margin-top: 15px;
+   }
+   .efectivo2{
+        /* border: 2px solid black;  */
+       height: 80px;
+       /* position: absolute; */
+       bottom: 55px;
+       display: block;
+       margin: 10px;
+   }
+   .efectivo2 input{
+       display: block;
+       margin-top: 5px;
+       height: 30px;
+       width: 300px;
+       background: rgb(102, 101, 101);
+   }
+   .efectivo3{
+        /* border: 2px solid blue;  */
+       height: 95px;
+       margin: 10px;
+       /* position: absolute; */
+       width: 80%;
+       bottom: -7%;
+       color: white;
+   }
+   .nombre1{
+       color: rgb(218, 129, 13);
+       margin: 5px;
+       font-size: 20px;
+   }
+
+
+
+
+    

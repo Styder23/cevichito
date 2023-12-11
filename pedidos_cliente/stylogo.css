@@ -1,0 +1,380 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: rgba(185, 146, 95, 0.685);
+}
+
+header{
+    position: absolute;
+    width:100%;
+}
+main{
+    padding-top: 10vh;
+    background: rgba(233, 196, 149, 0.685);
+}
+
+.barra{
+    border: 3PX solid black;
+    background: black;
+    max-height: 80px;
+    width: 100%;
+ }
+ 
+ .navbar-brand{
+     text-decoration: none;
+     font-family: 'Rochester', cursive;
+     color:orange;
+     font-size: 24px;
+     display:flex;     
+     justify-content: center; 
+     margin-right: 70%; 
+     position: relative;
+     left: 5%;
+     top:12px;
+ }
+
+ .imagen23{
+     border: 1px solid red;
+     position: relative;
+     top: 10%;
+     background: black;
+     border: none;
+     padding: 0;
+     max-width: 70px;
+     max-height: 70px; 
+     bottom: 100px;
+     left: 90%;
+ } 
+
+ 
+ .btn1,.btn2{
+    list-style: none;
+    text-decoration: none;
+    position: relative;
+    bottom: 120px;
+    left: 700px;
+
+}
+.btn1{
+    padding: 10px 50px;
+    margin:  0px 5px;
+    background-color: #b60909;
+    border-radius: 6px;
+    border: 2px solid #ee0d0d;
+    color: white;
+    
+}
+.btn2{
+    padding: 10px 40px;
+    margin:  0px 5px;
+    background-color: rgb(6, 88, 6);
+    border-radius: 6px;
+    border: 2px solid #0a8a26;
+    max-height: 120px;
+    width: 100%;
+    color: white;
+}
+ .imagen1{
+     margin:10px 10px;
+     padding: 0;
+     max-width: 70px;
+     max-height: 70px;
+     position: relative;
+     bottom:  30px;
+     /* top: -20px; */
+ }
+ /* .BANDERA{ 
+     padding: 50px;
+     max-height: 700px;
+     margin: 0;
+     max-width: 100%;
+     background: url(img/Bandera_Ancash.png);
+ } 
+.BANDERA .nombre{
+        color: white;
+        font-family: 'Rochester', cursive;
+}*/
+.carta:hover .cuerpoContenido {
+        transform: perspective(600px) rotateY(180deg);
+        -webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+        box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+}
+.carta{
+    /* border : 1px solid black;  */
+    width: 25%;    
+    border-radius: 10px;
+    
+}
+.cuerpoContenido{
+    width: 360px;
+    height: 355px;
+    margin:0;
+    position: relative;
+    transition: all ease .5s;
+    transform-style: preserve-3d;
+    /* Nota:
+        Establecemos que la imagen tendra una rotacion de 0grados al inicio porque si no
+        ponemos esta propiedad nos da un poco de problemas en algunos navegadores al pasar el cursor.
+    */
+    transform: perspective(600px) rotateY(0deg);
+}
+.cuerpoContenido.platoImg,
+.cuerpoContenido.describiendo {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: all ease .5s;
+}
+
+.cuerpoContenido.platoImg{
+    display: block;
+    background: #000;
+
+    /* Podemos ocultar la imagen al da la vuelta si lo queremos */
+    /*backface-visibility: hidden;*/
+}
+.describiendo {
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    color: #fff;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    overflow: auto;
+}
+ .rojo{
+    background: rgba(95,58,53,0.7);
+    background: -moz-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(95,58,53,0.7)), color-stop(100%, rgba(221,32,47,1)));
+    background: -webkit-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+    background: -o-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+    background: -ms-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+    background: linear-gradient(to bottom, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f3a35', endColorstr='#dd202f', GradientType=0 );}
+.azul{
+    background: rgba(251,232,202,0.7);
+    background: -moz-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251,232,202,0.7)), color-stop(100%, rgba(25,44,72,1)));
+    background: -webkit-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+    background: -o-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+    background: -ms-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+    background: linear-gradient(to bottom, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbe8ca', endColorstr='#192c48', GradientType=0 );
+}
+.gris{
+    background: rgba(223,234,241,0.7);
+    background: -moz-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(223,234,241,0.7)), color-stop(100%, rgba(15,99,144,1)));
+    background: -webkit-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+    background: -o-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+    background: -ms-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+    background: linear-gradient(to bottom, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfeaf1', endColorstr='#0f6390', GradientType=0 );
+}
+.describiendo li {
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 992px) { 
+    .describiendo {
+        /*position: relative;*/
+        backface-visibility:visible;
+        transform: perspective(600px) rotateY(0deg);
+    }
+
+    .carta:hover .cuerpoContenido {
+        transform: perspective(600px) rotateY(0deg);    
+    }
+}
+/*img{
+    transition: 0.7s;
+}
+img:hover{
+    -webkit-transform:scale(1.02);
+    transform:scale(1.04);
+}*/
+.cuerpoNombre{
+    /* border: 3px solid blue; */
+    margin: 0 0 5px 0;
+    /* border-bottom: 1px solid black; */
+}
+.nombress{
+    /* border: 3px solid red; */
+    text-align: center;
+    margin: 5px 0 5px 0;
+    font-size: 30px;
+    font-family: Rochester;
+    font-style: normal;
+    font-weight: normal;
+    color: rgb(248, 71, 7);
+
+}
+.cuerpoContenido{
+    /* border: 3px solid yellow;  */
+    text-align: center;
+    padding-bottom: 20px;
+}
+.platoImg{
+    /* border: 3px solid pink; */
+    border-radius: 10px;
+    width: 99%;
+    height: 300px;
+    
+}
+
+.describiendo{
+     /* border: 3px solid purple;  */
+    margin: 10px 0 20px 0;
+
+}
+.espaciado{
+    /* border: 3px solid red;  */
+    margin: 10px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.botonCompra{
+    /* border: 3px solid skyblue; */
+    padding: 10px 10px 10px 10px;
+    background: rgb(231, 133, 5);
+    border-radius: 5px;
+    color: white;
+    transition: 0.4s;
+    
+
+}
+.botonCompra:hover{
+    /* font-size: 17px; */
+    padding: 15px 15px 15px 15px;
+}
+.tresXtres{
+    /* border: 3px solid orange; */
+    margin: 30px 0px 30px 0px;
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.tablaIP{
+    position: relative;
+    /* display: inline-block; */
+    background-color: #fff;
+    text-align: left;
+    border-collapse: collapse;
+    top: -100px;
+    left: 910px;
+    background: white;
+    z-index: 2;
+}
+
+thead{
+    padding: 20px;
+    background-color: green;
+    border-bottom: 5px solid ;
+    color: black;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing:10px;
+}
+th,td{
+    padding: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+tr{
+    width: 100%;
+    margin: 4px;
+}
+tr:nth-child(even){
+    background-color: #ddd;
+}
+tr:hover td{
+    background: white;
+    background-color: rgba(214, 162, 49, 0.842);
+    color: white;
+}
+
+tbody{
+    position: absolute;
+    background-color: white;
+    overflow-y: scroll;
+    height: 60vh;
+}
+table::-webkit-scrollbar-thumb {
+    background: #f7891a;
+    border-radius: 4px;
+}
+
+.fa-times-circle:before{
+    color: red;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* responsive-desing */
+@media only screen and ( max-width: 900px ) {
+    .botonCompra{
+        background: black;
+    }
+    .tresXtres{
+        display: block;
+    }
+    .platoImg{
+        width: 80%;
+        height: 60%;
+    } 
+    .carta{
+        width: 50%;
+        height: 40%;
+    }
+    .describiendo{
+        font-size: 10px;
+        width: 80%;
+        height: 60%;
+    }
+
+    .describiendo li{
+        font-size: 10px;
+    }
+    .cuerpoContenido{
+        max-width: 30%;
+        max-height: 10%;
+    } 
+  
+    .btn1,.btn2{
+        
+        width: 20%;
+        height: 55%;
+        font-size: 10px;
+    }
+    .btn1{
+        left: 75%;
+
+    }
+    .btn2{
+        left:45%
+    }
+}
+
+
+
+.contenedorImgLogo{
+    /* border: 20px solid white; */
+    display: flex;
+    justify-content: space-between;
+
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cevicheria arcoiris</title>
+    <link rel="stylesheet" href="stylos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-/i9/2FqgqJKPUatkgi3wqHhTt/ZAyxn8U3w8QUzRVyFXtC1v6F5r4U2Ij13e5gVmEqY+fbQKecXU/E0FEQa3Pw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="principal.js"></script>
+</head>
+<body>
+    <div class="content-wrapper">
+    <!-- menu de navegación -->
+    <header>
+        <div class="logo">
+            <img src="../IMAGEN/logo1.png" alt="Cevicheria arcoiris">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="../pedidos_cliente/Carta.html">Carta</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="../Login/login.php">Login</a></li>
+                <!-- Agrega más elementos del menú según sea necesario -->
+            </ul>
+        </nav>
+    </header>
+    <!-- Cuerpo de la pagina -->
+    <main>
+        <div class="content-wrapper" id="inicio">
+        <div class="slider">
+            <div class="slide" style="background-image: url('../IMAGEN/ceviche-peruano.jpg');"></div>
+            <div class="slide" style="background-image: url('IMAGEN/61-imagen-1833443152018.jpg');"></div>
+            <div class="slide" style="background-image: url('IMAGEN/chicharrondepescadoweb.jpg');"></div>
+    
+            <!-- Flechas de navegación -->
+            <div class="slider-controls">
+                <button id="prevButton">&lt;</button>
+                <button id="nextButton">&gt;</button>
+            </div>
+        </div>
+        </div>
+        <div class="content-wrapper" id="nosotros">
+        <section class="about-us">
+            <div class="about-image">
+                <img src="../IMAGEN/000144587M.jpg" alt="Imagen sobre nosotros">
+            </div>
+            <div class="about-description">
+                <h2>¡Bienvenidos a la "CEVICHERIA ARCO IRIS"</h2>
+                <p>¡Bienvenidos a pagina web de "Cevichería Arcoíris", donde podrá conocer un poco de la empresa 
+                    así como sus exquisitos platos. Nuestra cevicheria se caracteriza por brindar un servicio de calidad, 
+                    con platos innovadores, trato cariñoso y personalizado para todos nuestros clientes.</p> <br>
+                    <p> Descubre la fusión única de ingredientes frescos y marinados, 
+                    creando una experiencia culinaria vibrante y deliciosa. Sumérgete en la 
+                    frescura de nuestros platillos y deja que Cevichería Arcoíris te lleve a 
+                    un viaje de sabores únicos con cada bocado. ¡Disfruta de la magia de la 
+                    trucha en cada plato con nosotros!</p>
+            </div>
+        </section>
+        </div>
+        <div class="content-wrapper" id="menu">
+        <section class="menu">
+            <h2>PLATOS BANDERA</h2>
+        
+            <div class="menu-categories">
+                <div class="category" id="platosMarinos">
+                    <h3>Platos Marinos</h3>
+                    <div class="menu-item">
+                        <img src="../IMAGEN/ceviche-peruano.jpg" alt="Ceviche de pescado">
+                        <div class="item-details">
+                            <h4>Ceviche de Pescado</h4>
+                            <p>Delicioso ceviche preparado con pescado fresco, cebolla, cilantro, limón y ají.</p>
+                        </div>
+                    </div>
+                    <!-- Agrega más elementos de platos marinos según sea necesario -->
+                </div>
+            
+                <div class="category" id="platosNormales">
+                    <h3>Platos Normales</h3>
+                    <div class="menu-item">
+                        <img src="../IMAGEN/chicharrondepescadoweb.jpg" alt="Plato de pescado a la parrilla">
+                        <div class="item-details">
+                            <h4>Pescado a la Parrilla</h4>
+                            <p>Filete de pescado a la parrilla con verduras frescas.</p>
+                        </div>
+                    </div>
+                    <!-- Agrega más elementos de platos normales según sea necesario -->
+                </div>
+        
+                <div class="category" id="bebidas">
+                    <h3>Bebidas</h3>
+                    <div class="menu-item">
+                        <img src="../IMAGEN/2020-09-27.jpg" alt="Bebida refrescante">
+                        <div class="item-details">
+                            <h4>Bebida Refrescante</h4>
+                            <p>Bebida fría y deliciosa para acompañar tu comida.</p>
+                        </div>
+                    </div>
+                    <!-- Agrega más elementos de bebidas según sea necesario -->
+                </div>
+        
+                <div class="category" id="extras">
+                    <h3>Extras</h3>
+                    <div class="menu-item">
+                        <img src="../IMAGEN/chicharrondepescadoweb.jpg" alt="Extra adicional">
+                        <div class="item-details">
+                            <h4>Extra Adicional</h4>
+                            <p>Agrega algo extra a tu pedido, como aguacate o maíz.</p>
+                        </div>
+                    </div>
+                    <!-- Agrega más elementos de extras según sea necesario -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="content-wrapper" id="contacto">
+        <section class="contact">
+            <h2>Contacto</h2>
+            <form action="#" method="post" id="contactForm">
+                <div class="form-group">
+                    <label for="firstName">Nombre:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="lastName">Apellidos:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="phone">Número de Contacto:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+        
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+            <section class="location">
+                <h2>Ubicación</h2>
+                <p>Encuéntranos en el mapa:</p>
+                <div class="map-container">
+                    <!-- Aquí puedes insertar el código de tu mapa de Google Maps -->
+                    <iframe src="https://www.google.com/maps/place/Castro+I+-+Cevicher%C3%ADa+Parrillas/@-9.5208119,-77.5223211,17z/data=!3m1!4b1!4m6!3m5!1s0x91a90d0b3d4fdc29:0xbcb6fc65753c2279!8m2!3d-9.5208172!4d-77.5197462!16s%2Fg%2F11c76m0ww_?entry=ttu" width="600" height="450" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </section>
+        </section>
+       
+    </div>
+        
+    </main>
+</div>
+<footer class="footer">
+    <div class="footer-section centered">
+        <div class="address">
+            <h3>Dirección</h3>
+            <p>Calle Principal, Número 123</p>
+            <p>Huaraz, Perú</p>
+        </div>
+    </div>
+
+    <div class="footer-section centered">
+        <div class="contact1">
+            <h3>Contacto</h3>
+            <p>Email: cevicheriaarcoiris@gmail.com</p>
+            <p>Teléfono: 912312234</p>
+        </div>
+    </div>
+
+    <div class="footer-section centered">
+        <div class="social">
+            <h3>Redes Sociales</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank">
+                    <img src="../IMAGEN/fb_icon_325x325.png" alt="Facebook">
+                    <span>Facebook</span>
+                </a>
+                <a href="#" target="_blank">
+                    <img src="../IMAGEN/WhatsApp.svg.png" alt="WhatsApp">
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#" target="_blank">
+                    <img src="../IMAGEN/logo_instagram.png" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="footer-section centered">
+            <div class="payments">
+                <h3>Aceptamos</h3>
+                <div class="payment-icons">
+                    <div>
+                        <img src="../IMAGEN/descarga.png" alt="Yape" class="payment-image">
+                        <span>Yape</span>
+                    </div>
+                    <div>
+                        <img src="../IMAGEN/plin-logo-967A4AF583-seeklogo.com.png" alt="Efectivo" class="payment-image">
+                        <span>Efectivo</span>
+                    </div>
+                    <div>
+                        <img src="../IMAGEN/VISA-Logo.png" alt="Visa" class="payment-image">
+                        <span>Visa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="footer-section centered copyright">
+        <p>&copy; Grupo04 | Proyecto de programación III</p>
+    </div>
+</footer>
+
+<script>
+    $(document).ready(function() {
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+
+            var target = this.hash;
+            var $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 900, 'swing', function () {
+                window.location.hash = target;
+            });
+        });
+    });
+</script>
+</body>
+
+</html>

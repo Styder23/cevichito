@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylogo.css">    
+
+    <title>Carrito Compras en JavaScript</title>  
+    <style>
+         .BANDERA{
+     padding: 50px;
+     max-height: 700px;
+     margin: 0;
+     max-width: 100%;
+     background: url(./imgcarta/bandera.png);
+}
+.BANDERA .nombre{
+        color: white;
+        font-family: 'Rochester', cursive;
+}
+    </style>   
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="barra">
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <a class="navbar-brand" href="#">Cevicheria Arco Iris</a>
+                    <div class="imagen"><a href="../Inicio/index.html"> <img class="imagen1" src="../IMAGEN/logo1.png"></a> </div>
+                    <div class="lol">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                  <button class="imagen23" onclick="mostrarCompra()" > 
+                                <img alt="pg" src="./imgcarta/carro.png"  class="lol1" height="70px"
+                                    width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                </button>
+                               
+                                <div id="carrito" class="dropdown-menu desplegable" aria-labelledby="navbarCollapse" style="display: none" > 
+                                     <a href="#" id="vaciar-carrito" class="btn1" onclick="ocultalcabecera()">Vaciar Carrito</a>
+                                    <a href="../pedidos_cliente/compras.html" id="procesar-pedido" class="btn2">Procesar Compra</a>
+                                    <table id="lista-carrito" class="tablaIP">
+                                        <thead id="letras">
+                                            <tr >
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>cerrar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="BANDERA" >
+			<h3 class="nombre">Ceviches</h3>
+		</div>
+
+        <div class="container todoCompleto" id="lista-productos">
+
+            <div class="card-deck mb-3 text-center tresXtres">
+
+                <div class="card mb-4 shadow-sm  carta">
+                    <div class="card-header cuerpoNombre">
+                        <h4 class="my-0 font-weight-bold  nombress"> <b>Ceviches de trucha</b></h4>
+                    </div>
+                    <div class="card-body  cuerpoContenido">
+                        <img alt="" src="../IMAGEN/ceviche-peruano.jpg" class="card-img-top platoImg">
+                        <h1 class="card-title pricing-card-title precio pagar">S/. <span class="">15</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4 describiendo azul">
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, maiores odit facere eius! Officia
+                                pariatur iure, adipisci corporis sit quae culpa ipsam tempora similique laborum, magnam ut atque
+                                sapiente nemo</li>
+                        </ul> 
+                    </div>
+                <div class="espaciado">
+                    <a href="" class="btn btn-block btn-primary agregar-carrito botonCompra" data-id="109">Comprar</a>
+                </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm  carta">
+                    <div class="card-header cuerpoNombre">
+                        <h4 class="my-0 font-weight-bold  nombress"> <b>Cevichocho</b></h4>
+                    </div>
+                    <div class="card-body  cuerpoContenido">
+                        <img alt="" src="img/ComidaItaliana/ensaladas/gourmet.jpg" class="card-img-top platoImg">
+                        <h1 class="card-title pricing-card-title precio pagar">S/. <span class="">11.50</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4 describiendo gris">
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, maiores odit facere eius! Officia
+                                pariatur iure, adipisci corporis sit quae culpa ipsam tempora similique laborum, magnam ut atque
+                                sapiente nemo</li>
+                        </ul>
+                    </div>
+                    <div class="espaciado">
+                    <a href="" class="btn btn-block btn-primary agregar-carrito botonCompra" data-id="110">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm  carta">
+                    <div class="card-header cuerpoNombre">
+                        <h4 class="my-0 font-weight-bold  nombress"><b>Chocho</b></h4>
+                    </div>
+                    <div class="card-body  cuerpoContenido">
+                        <img alt="" src="../IMAGEN/10-cebiche-chochos-aguacate.jpg" class="card-img-top platoImg">
+                        <h1 class="card-title pricing-card-title precio pagar">S/. <span class="">9</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4 describiendo rojo">
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, maiores odit facere eius! Officia
+                                pariatur iure, adipisci corporis sit quae culpa ipsam tempora similique laborum, magnam ut atque
+                                sapiente nemo</li>
+                        </ul>
+                    </div>
+                    <div class="espaciado">
+                    <a href="" class="btn btn-block btn-primary agregar-carrito botonCompra" data-id="111">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-deck mb-3 text-center tresXtres">
+
+                <div class="card mb-4 shadow-sm  carta">
+                    <div class="card-header cuerpoNombre">
+                        <h4 class="my-0 font-weight-bold  nombress"><b>Arroz con mariscos</b></h4>
+                    </div>
+                    <div class="card-body  cuerpoContenido">
+                        <img alt="" src="../IMAGEN/arroz-con-mariscos.jpeg" class="card-img-top platoImg">
+                        <h1 class="card-title pricing-card-title precio pagar">S/. <span class="">10.50</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4 describiendo azul">
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, maiores odit facere eius! Officia
+                                pariatur iure, adipisci corporis sit quae culpa ipsam tempora similique laborum, magnam ut atque
+                                sapiente nemo</li>
+                        </ul>
+                    </div>
+                    <div class="espaciado">
+                    <a href="" class="btn btn-block btn-primary agregar-carrito botonCompra" data-id="112">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm  carta">
+                    <div class="card-header cuerpoNombre">
+                        <h4 class="my-0 font-weight-bold  nombress"> <b>Sopa Chilcano</b></h4>
+                    </div>
+                    <div class="card-body  cuerpoContenido">
+                        <img alt="" src="../IMAGEN/chilcano.jfif"class="card-img-top platoImg">
+                        <h1 class="card-title pricing-card-title precio pagar">S/. <span class="">10</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4 describiendo gris">
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, maiores odit facere eius! Officia
+                                pariatur iure, adipisci corporis sit quae culpa ipsam tempora similique laborum, magnam ut atque
+                                sapiente nemo</li>
+                        </ul>
+                    </div>
+                    <div class="espaciado">
+                    <a href="" class="btn btn-block btn-primary agregar-carrito botonCompra" data-id="113">Comprar</a>
+                    </div>
+                </div>
+
+               
+                <div class="card mb-4 shadow-sm  carta">
+                    <div class="card-header cuerpoNombre">
+                        <h4 class="my-0 font-weight-bold  nombress"><b>Pesacado frito</b></h4>
+                    </div>
+                    <div class="card-body  cuerpoContenido">
+                        <img alt="" src="../IMAGEN/TruchaFrita.jpg" class="card-img-top platoImg">
+                        <h1 class="card-title pricing-card-title precio pagar">S/. <span class="">9</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4 describiendo rojo">
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, maiores odit facere eius! Officia
+                                pariatur iure, adipisci corporis sit quae culpa ipsam tempora similique laborum, magnam ut atque
+                                sapiente nemo</li>
+                        </ul>
+                    </div>
+                    <div class="espaciado">
+                    <a href="" class="btn btn-block btn-primary agregar-carrito botonCompra" data-id="114">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+    <script src="../pedidos_cliente/js/ocultar.js"></script>
+    <script src="../pedidos_cliente/js/carrito.js"></script>
+    <script src="../pedidos_cliente/js/pedido.js"></script>
+
+</body>
+
+</html>
